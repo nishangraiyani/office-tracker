@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Time Tracker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .right {
+      text-align: right;
+    }
+    .container {
+      max-width: 900px;
+      margin: 10% auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    button:disabled {
+  opacity: 0.5; /* Adjust opacity to visually indicate button is disabled */
+  cursor: not-allowed; /* Change cursor to not-allowed */
+}
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #timer {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    table table {
+      width: 100%;
+    }
+
+    table th,
+    table td {
+      border: none;
+      padding: 5px;
+    }
+    
+    #clearData {
+      float: right;
+      margin-bottom: 8px;
+    }
+  </style>
+
+  <script src="popup.js"></script>
+</head>
+<body>
+  <button id="clearData">Clear</button>
+</br>
+  <div class="container">
+    <button id="startButton">Start Tracking</button>
+    <button id="endButton">End Tracking</button>
+    <div id="timer" >00:00:00</div>
+
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Total Hour</th>
+          <th>Time Stamps</th>
+        </tr>
+      </thead>
+      <tbody id="dataBody"></tbody>
+    </table>
+  </div>
+</body>
+</html>
+ 
